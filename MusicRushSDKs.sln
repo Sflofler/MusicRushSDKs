@@ -1,12 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicRushSDKs", "MusicRushSDKs.csproj", "{A115900B-AE44-25B2-5DD8-1D032DB2A59A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicRushSDKs.Editor", "MusicRushSDKs.Editor.csproj", "{1A52B1F3-BCD7-DFE1-FE04-9A8D5FA769CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A115900B-AE44-25B2-5DD8-1D032DB2A59A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A115900B-AE44-25B2-5DD8-1D032DB2A59A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A115900B-AE44-25B2-5DD8-1D032DB2A59A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A115900B-AE44-25B2-5DD8-1D032DB2A59A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A52B1F3-BCD7-DFE1-FE04-9A8D5FA769CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A52B1F3-BCD7-DFE1-FE04-9A8D5FA769CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A52B1F3-BCD7-DFE1-FE04-9A8D5FA769CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A52B1F3-BCD7-DFE1-FE04-9A8D5FA769CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
