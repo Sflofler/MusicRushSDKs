@@ -22,15 +22,65 @@ apply plugin: 'com.android.application'
 dependencies {
 	compile 'com.android.support:multidex:1.0.1'
 	compile fileTree(dir: 'libs', include: ['*.jar'])
-**DEPS**}
+	compile(name: 'android.arch.core.runtime-1.1.0', ext:'aar')
+	compile(name: 'android.arch.lifecycle.livedata-core-1.1.0', ext:'aar')
+	compile(name: 'android.arch.lifecycle.runtime-1.1.0', ext:'aar')
+	compile(name: 'android.arch.lifecycle.viewmodel-1.1.0', ext:'aar')
+	compile(name: 'com.android.support.animated-vector-drawable-27.1.1', ext:'aar')
+	compile(name: 'com.android.support.appcompat-v7-27.1.1', ext:'aar')
+	compile(name: 'com.android.support.support-compat-27.1.1', ext:'aar')
+	compile(name: 'com.android.support.support-core-ui-27.1.1', ext:'aar')
+	compile(name: 'com.android.support.support-core-utils-27.1.1', ext:'aar')
+	compile(name: 'com.android.support.support-fragment-27.1.1', ext:'aar')
+	compile(name: 'com.android.support.support-media-compat-27.1.1', ext:'aar')
+	compile(name: 'com.android.support.support-v4-27.1.1', ext:'aar')
+	compile(name: 'com.android.support.support-vector-drawable-27.1.1', ext:'aar')
+	compile(name: 'com.google.android.gms.play-services-ads-identifier-16.0.0', ext:'aar')
+	compile(name: 'com.google.android.gms.play-services-auth-16.0.1', ext:'aar')
+	compile(name: 'com.google.android.gms.play-services-auth-api-phone-16.0.0', ext:'aar')
+	compile(name: 'com.google.android.gms.play-services-auth-base-16.0.0', ext:'aar')
+	compile(name: 'com.google.android.gms.play-services-base-16.0.1', ext:'aar')
+	compile(name: 'com.google.android.gms.play-services-basement-16.1.0', ext:'aar')
+	compile(name: 'com.google.android.gms.play-services-drive-16.0.0', ext:'aar')
+	compile(name: 'com.google.android.gms.play-services-games-16.0.0', ext:'aar')
+	compile(name: 'com.google.android.gms.play-services-measurement-api-16.0.4', ext:'aar')
+	compile(name: 'com.google.android.gms.play-services-measurement-base-16.0.5', ext:'aar')
+	compile(name: 'com.google.android.gms.play-services-nearby-16.0.0', ext:'aar')
+	compile(name: 'com.google.android.gms.play-services-phenotype-16.0.0', ext:'aar')
+	compile(name: 'com.google.android.gms.play-services-stats-16.0.1', ext:'aar')
+	compile(name: 'com.google.android.gms.play-services-tasks-16.0.1', ext:'aar')
+	compile(name: 'com.google.firebase.firebase-abt-16.0.1', ext:'aar')
+	compile(name: 'com.google.firebase.firebase-analytics-16.0.6', ext:'aar')
+	compile(name: 'com.google.firebase.firebase-analytics-impl-16.2.4', ext:'aar')
+	compile(name: 'com.google.firebase.firebase-analytics-unity-5.4.2', ext:'aar')
+	compile(name: 'com.google.firebase.firebase-app-unity-5.4.2', ext:'aar')
+	compile(name: 'com.google.firebase.firebase-common-16.0.4', ext:'aar')
+	compile(name: 'com.google.firebase.firebase-config-16.1.2', ext:'aar')
+	compile(name: 'com.google.firebase.firebase-config-unity-5.4.2', ext:'aar')
+	compile(name: 'com.google.firebase.firebase-core-16.0.6', ext:'aar')
+	compile(name: 'com.google.firebase.firebase-iid-17.0.4', ext:'aar')
+	compile(name: 'com.google.firebase.firebase-iid-interop-16.0.1', ext:'aar')
+	compile(name: 'com.google.firebase.firebase-measurement-connector-17.0.1', ext:'aar')
+	compile(name: 'com.google.firebase.firebase-measurement-connector-impl-17.0.4', ext:'aar')
+	compile(name: 'com.google.firebase.firebase-messaging-17.3.4', ext:'aar')
+	compile(name: 'com.google.games.gpgs-plugin-support-0.9.54', ext:'aar')
+	compile(name: 'devtodev', ext:'aar')
+	compile(name: 'gameanalytics', ext:'aar')
+	compile project(':adcolony')
+	compile project(':appodeal')
+	compile project(':Firebase')
+	compile project(':GooglePlayGamesManifest.plugin')
+	compile project(':inmobi')
+	compile project(':ogury')
+}
 
 android {
-	compileSdkVersion **APIVERSION**
-	buildToolsVersion '**BUILDTOOLS**'
+	compileSdkVersion 27
+	buildToolsVersion '28.0.2'
 
 	defaultConfig {
-		targetSdkVersion **TARGETSDKVERSION**
-		applicationId '**APPLICATIONID**'
+		targetSdkVersion 27
+		applicationId 'com.CanvasMobileGames.SuperCasual'
 		multiDexEnabled true
 	}
 
@@ -39,7 +89,7 @@ android {
 	}
 
 	aaptOptions {
-		noCompress '.unity3d', '.ress', '.resource', '.obb'**STREAMING_ASSETS**
+		noCompress '.unity3d', '.ress', '.resource', '.obb', 'build_info.txt'
 	}
 
 **SIGN**

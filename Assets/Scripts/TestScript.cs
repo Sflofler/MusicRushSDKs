@@ -1,27 +1,18 @@
 ﻿using UnityEngine;
-using AppodealAds.Unity.Api;
-using AppodealAds.Unity.Common;
-using Vdopia;
+using UnityEngine.UI;
 
 public class TestScript : MonoBehaviour
 {
+    PluginManager pm = new PluginManager();
+    public Button btn;
+
     private void Start()
     {
-#if UNITY_IOS
-        AuthenticateGameCenter()
-#endif
+        btn.onClick.AddListener(OnButtonClick);
     }
 
-    public void AuthenticateGameCenter()
+    public void OnButtonClick()
     {
-        Social.localUser.Authenticate(success =>
-        {
-            if (success)
-                print("Authentication Successful");
-            else
-                print("Authentication Failed");
-        });
+
     }
 }
-
-
