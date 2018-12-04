@@ -26,6 +26,8 @@ public abstract class BaseSDK : IRewardedVideoAdListener
 #elif UNITY_IOS
         appKey = "d69b153104983f02e46a80ff0d7f32216b85a57eb38a11a4";
 #endif
+        //Appodeal.disableNetwork("startapp");
+        //Appodeal.disableNetwork("mobvista");
         Appodeal.setTesting(true); // use it to show test ad
         Appodeal.setAutoCache(Appodeal.REWARDED_VIDEO, true); // auto caching rewarded video ads
         Appodeal.setAutoCache(Appodeal.INTERSTITIAL, true); // auto caching interstitial ads
@@ -151,9 +153,6 @@ public class PluginManager : MonoBehaviour
 {
     BaseSDK sdk;
     public bool enableAppodeal;
-
-    // UI Test
-    public Button btn;
 
     private void Awake()
     {

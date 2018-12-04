@@ -1,6 +1,7 @@
 <dependencies>
   <packages>
     <package>com.android.support:appcompat-v7:27.1.1</package>
+    <package>com.google.android.gms:play-services-ads:15.0.1</package>
     <package>com.google.android.gms:play-services-ads-identifier:15.0.1</package>
     <package>com.google.android.gms:play-services-ads-identifier:16.0.0+</package>
     <package>com.google.android.gms:play-services-basement:15.0.1</package>
@@ -25,6 +26,7 @@
     <file>Assets/Plugins/Android/android.arch.lifecycle.viewmodel-1.1.0.aar</file>
     <file>Assets/Plugins/Android/com.android.support.animated-vector-drawable-27.1.1.aar</file>
     <file>Assets/Plugins/Android/com.android.support.appcompat-v7-27.1.1.aar</file>
+    <file>Assets/Plugins/Android/com.android.support.customtabs-27.1.1.aar</file>
     <file>Assets/Plugins/Android/com.android.support.support-annotations-27.1.1.jar</file>
     <file>Assets/Plugins/Android/com.android.support.support-compat-27.1.1.aar</file>
     <file>Assets/Plugins/Android/com.android.support.support-core-ui-27.1.1.aar</file>
@@ -33,7 +35,10 @@
     <file>Assets/Plugins/Android/com.android.support.support-media-compat-27.1.1.aar</file>
     <file>Assets/Plugins/Android/com.android.support.support-v4-27.1.1.aar</file>
     <file>Assets/Plugins/Android/com.android.support.support-vector-drawable-27.1.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-17.1.2.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-base-17.1.2.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-16.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-17.1.2.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-auth-16.0.1.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-auth-api-phone-16.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-auth-base-16.0.0.aar</file>
@@ -41,8 +46,10 @@
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-basement-16.1.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-drive-16.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-games-16.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-gass-17.1.2.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-api-16.0.4.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-base-16.0.5.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-api-16.0.4.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-nearby-16.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-phenotype-16.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-stats-16.0.1.aar</file>

@@ -243,8 +243,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: E:/ProjetosUnity/MusicRushSDKs/user.keystore
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: E:/ProjetosUnity/MusicRushSDKs/ms2.keystore
+  AndroidKeyaliasName: com.canvasgames.musicrush
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0

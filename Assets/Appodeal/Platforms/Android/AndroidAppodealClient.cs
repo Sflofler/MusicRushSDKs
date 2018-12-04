@@ -107,9 +107,6 @@ namespace AppodealAds.Unity.Android {
 		}
 
 		public void initialize(string appKey, int adTypes, bool hasConsent)  {
-            getAppodealClass().CallStatic("disableNetwork", getActivity(), "mobvista");
-            getAppodealClass().CallStatic("disableNetwork", getActivity(), "yandex");
-            getAppodealClass().CallStatic("disableNetwork", getActivity(), "startapp");
             getAppodealClass().CallStatic("setFramework", "unity", Appodeal.getPluginVersion(), Application.unityVersion);
 			#if UNITY_5_6_0 || UNITY_5_6_1
 				getAppodealClass().CallStatic("setFramework", "unity", Appodeal.getPluginVersion(), Application.unityVersion, true, false);
