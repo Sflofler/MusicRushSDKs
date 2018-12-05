@@ -5,6 +5,7 @@ using AppodealAds.Unity.Common;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using GameAnalyticsSDK;
+using Firebase;
 
 namespace Ads
 {
@@ -154,6 +155,31 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
         GameAnalytics.Initialize();
     }
     #endregion
+
+    #region Firebase
+#if UNITY_ANDROID
+    public void InitializeFirebase()
+    {
+        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
+        {
+            var dependencyStatus = task.Result;
+            if(dependencyStatus == DependencyStatus.Available)
+            {
+                FirebaseApp app = FirebaseApp.DefaultInstance;
+                Debugger.Log("red", "Firebase", "Initialized.");
+            }
+            else
+            {
+                Debug.LogError(string.Format("Could not resolve all Firebase dependencies: {0}", dependencyStatus));
+            }
+        });
+    }
+#endif
+    #endregion
+
+    #region Chocolate
+
+    #endregion
 }
 
 public class AndroidSDK : BaseSDK
@@ -166,6 +192,7 @@ public class AndroidSDK : BaseSDK
         InitializeGooglePlayGames();
         SignIn();
         InitializeAppodeal();
+        InitializeFirebase();
 
         Debug.Log("<color=blue>SDK Manager Initialized</color>");
     }

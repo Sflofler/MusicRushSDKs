@@ -162,6 +162,12 @@ Support
 
 Release Notes
 -------------
+### 5.4.3
+  - Overview
+    - Bug fix for Firebase Storage on iOS.
+  - Changes
+    - Storage (iOS): Fixed an issue when downloading files with `GetBytesAsync`.
+
 ### 5.4.2
   - Overview
     - Updated iOS and Android dependency versions, and fixed issues in the
