@@ -17,6 +17,22 @@ allprojects {
    }
 }
 
+repositories {
+    maven { url 'https://jitpack.io' }
+    maven { url "https://adcolony.bintray.com/AdColony" }
+    maven { url "https://dl.bintray.com/vdopiacorp/sdk" }
+    maven { url "http://repository.youappi.com/repository/release" }
+    // If you're using a version of Gradle greater than or equal to 4.1, you must use:
+    // google()
+
+    // If you're using a version of Gradle lower than 4.1, you must use:
+    maven { url 'https://maven.google.com' }
+
+    flatDir {
+        dirs 'libs'
+    }
+}
+
 apply plugin: 'com.android.application'
 
 dependencies {
