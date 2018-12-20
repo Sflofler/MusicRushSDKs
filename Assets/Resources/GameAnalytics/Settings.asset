@@ -24,14 +24,19 @@ MonoBehaviour:
   UserMessagesSubmitted: 0
   UserMessagesFailed: 0
   CustomArea: 
-  gameKey: []
-  secretKey: []
-  Build: []
-  SelectedPlatformStudio: []
-  SelectedPlatformGame: []
-  SelectedPlatformGameID: 
-  SelectedStudio: 
-  SelectedGame: 
+  gameKey:
+  - 012d8fb6ef1e0166e1a84b37ca552f9c
+  secretKey:
+  - dd0b5af45a50cc4a64fe188d9f607fd6d5cafd12
+  Build:
+  - 0.1
+  SelectedPlatformStudio:
+  - Canvas Mobile Games
+  SelectedPlatformGame:
+  - Music Rush
+  SelectedPlatformGameID: 4bf90000
+  SelectedStudio: 01000000
+  SelectedGame: 01000000
   NewVersion: 
   Changes: 
   SignUpOpen: 0
@@ -51,7 +56,7 @@ MonoBehaviour:
   ResourceItemTypes: []
   ResourceCurrencies: []
   LastCreatedGamePlatform: -1
-  Platforms: 
+  Platforms: 0b000000
   CurrentInspectorState: 1
   ClosedHints: 
   DisplayHints: 0
@@ -78,7 +83,7 @@ MonoBehaviour:
   IncludeGooglePlay: 1
   FpsCriticalThreshold: 20
   FpsCirticalSubmitInterval: 1
-  PlatformFoldOut: 
+  PlatformFoldOut: 01
   CustomDimensions01FoldOut: 0
   CustomDimensions02FoldOut: 0
   CustomDimensions03FoldOut: 0

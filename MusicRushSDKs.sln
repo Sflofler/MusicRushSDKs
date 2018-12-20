@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicRushSDKs", "MusicRushSDKs.csproj", "{A115900B-AE44-25B2-5DD8-1D032DB2A59A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicRushSDKs.Plugins", "MusicRushSDKs.Plugins.csproj", "{740B1FE0-9332-394B-1B95-81AC7F53EBF8}"
