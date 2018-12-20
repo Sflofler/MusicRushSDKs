@@ -192,7 +192,6 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
     /// </summary>
     public void InitializeChocolate()
     {
-#if UNITY_ANDROID
         chocoPlugin = VdopiaPlugin.GetInstance();
 
         if (chocoPlugin != null)
@@ -209,7 +208,6 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
         {
             Debugger.Log("green", "Chocolate", "failed to initialize.");
         }
-#endif
 	}
 
     #region Callbacks handlers
