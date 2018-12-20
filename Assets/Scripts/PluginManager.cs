@@ -163,7 +163,7 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
     #endregion
 
     #region Firebase
-#if UNITY_ANDROID
+
     /// <summary>
     /// Initializes Firebase SDK.
     /// </summary>
@@ -183,7 +183,6 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
             }
         });
     }
-#endif
     #endregion
 
     #region Chocolate
