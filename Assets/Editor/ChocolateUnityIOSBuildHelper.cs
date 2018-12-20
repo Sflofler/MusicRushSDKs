@@ -1,3 +1,4 @@
+#if USE_CHOCOLATE
 using UnityEditor;
 using UnityEditor.Callbacks;
 using System.IO;
@@ -101,3 +102,4 @@ public class ChocolateUnityIOSBuildHelper  {
 
   #endregion
 }
+#endif
