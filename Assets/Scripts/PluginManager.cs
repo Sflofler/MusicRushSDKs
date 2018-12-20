@@ -8,7 +8,9 @@ using GooglePlayGames.BasicApi;
 #endif
 using GameAnalyticsSDK;
 using Firebase;
-using Vdopia;
+#if USE_CHOCOLATE
+using Vdopia; // Chocolate
+#endif
 
 namespace Ads
 {
@@ -19,7 +21,7 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
 {
     public abstract void Initialize();
 
-    #region Appodeal
+#region Appodeal
     public string appKey;
     /// <summary>
     /// Initialize Appodeal.
@@ -106,34 +108,34 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
         }
     }
 
-    #region  Rewarded Video callback handlers
+#region  Rewarded Video callback handlers
     public void onRewardedVideoLoaded(bool isPrecache) { Debug.Log("Video loaded"); }
     public void onRewardedVideoFailedToLoad() { Debug.Log("Video failed"); }
     public void onRewardedVideoShown() { Debug.Log("Video shown"); }
     public void onRewardedVideoClosed(bool finished) { Debug.Log("Video closed"); }
     public void onRewardedVideoFinished(double amount, string name) { Debug.Log("Reward: " + amount + " " + name); }
     public void onRewardedVideoExpired() { Debug.Log("Video expired"); }
-    #endregion
+#endregion
 
-    #region Interstitial callback handlers
+#region Interstitial callback handlers
     public void onInterstitialLoaded(bool isPrecache) { Debug.Log("Interstitial loaded"); }
     public void onInterstitialFailedToLoad() { Debug.Log("Interstitial failed"); }
     public void onInterstitialShown() { Debug.Log("Interstitial opened"); }
     public void onInterstitialClosed() { Debug.Log("Interstitial closed"); }
     public void onInterstitialClicked() { Debug.Log("Interstitial clicked"); }
     public void onInterstitialExpired() { Debug.Log("Interstitial expired"); }
-    #endregion
+#endregion
 
-    #region Banner callback handlers
+#region Banner callback handlers
     public void onBannerLoaded(bool precache) { Debug.Log("banner loaded"); }
     public void onBannerFailedToLoad() { Debug.Log("banner failed"); }
     public void onBannerShown() { Debug.Log("banner opened"); }
     public void onBannerClicked() { Debug.Log("banner clicked"); }
     public void onBannerExpired() { Debug.Log("banner expired"); }
-    #endregion
-    #endregion
+#endregion
+#endregion
 
-    #region Google Play Games
+#region Google Play Games
 #if UNITY_ANDROID
     /// <summary>
     /// Initializes Google Play Games SDK.
@@ -149,9 +151,9 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
 
     // Sign In to social.
     public abstract void SignIn();
-    #endregion
+#endregion
 
-    #region Game Analytics
+#region Game Analytics
     /// <summary>
     /// Initializes Game Analytics SDK(use it in Start method).
     /// </summary>
@@ -160,9 +162,9 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
         GameAnalytics.Initialize();
         Debugger.Log("blue", "Game Analytics", "Initialized.");
     }
-    #endregion
+#endregion
 
-    #region Firebase
+#region Firebase
 
     /// <summary>
     /// Initializes Firebase SDK.
@@ -185,7 +187,8 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
     }
     #endregion
 
-    #region Chocolate
+#region Chocolate
+#if USE_CHOCOLATE
     VdopiaPlugin chocoPlugin;
     /// <summary>
     /// Initialize Chocolate Ads SDK.
@@ -210,7 +213,7 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
         }
 	}
 
-    #region Callbacks handlers
+#region Callbacks handlers
     //This is your defined ad event receiver; invoked after you
     //call loadInterstitialAd() or loadRewardAd() which are defined below.
     void onVdopiaEventReceiver(string adType, string eventName)     //Ad Event Receiver
@@ -251,9 +254,9 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
             //Or you may choose to reward your user from the client here.
         }
     }
-    #endregion
+#endregion
 
-    #region Interstitial Ad Methods
+#region Interstitial Ad Methods
     public void loadInterstitialAd()     //called when btnLoadInterstitial Clicked
     {
         Debug.Log("Load Interstitial...");
@@ -273,9 +276,9 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
             chocoPlugin.ShowInterstitialAd();
         }
     }
-    #endregion
+#endregion
 
-    #region Rewarded Video Ad Methods
+#region Rewarded Video Ad Methods
     public void requestRewardAd()       //called when btnRequestReward Clicked
     {
         Debug.Log("Request Reward...");
@@ -309,10 +312,11 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
             Debug.Log("Check Reward Ad Available..." + isReady);
         }
     }
-    #endregion
-    #endregion
+#endregion
+#endif
+#endregion
 
-    #region DevToDev
+#region DevToDev
     /// <summary>
     /// Initialized DevToDev SDK.
     /// </summary>
@@ -323,7 +327,7 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
         Debugger.Log("blue", "DevToDev", "Initialized.");
 #endif
     }
-    #endregion
+#endregion
 }
 
 public class AndroidSDK : BaseSDK
@@ -339,7 +343,9 @@ public class AndroidSDK : BaseSDK
         InitializeAppodeal();
         InitializeGameAnalytics();
         InitializeFirebase();
+#if USE_CHOCOLATE
         InitializeChocolate();
+#endif
         InitializeDevToDev();
 
         Debug.Log("<color=blue>SDK Manager Initialized</color>");
@@ -375,7 +381,9 @@ public class IOSSDK : BaseSDK
         InitializeAppodeal();
         InitializeGameAnalytics();
         InitializeFirebase();
+#if USE_CHOCOLATE
         InitializeChocolate();
+#endif
         InitializeDevToDev();
 
         Debug.Log("<color=blue>SDK Manager Initialized</color>");
