@@ -23,7 +23,7 @@ public abstract class BaseSDK //: IRewardedVideoAdListener, IInterstitialAdListe
 {
     public abstract void Initialize();
 
-    #region Appodeal
+#region Appodeal
 #if USE_APPODEAL
     public string appKey;
     /// <summary>
