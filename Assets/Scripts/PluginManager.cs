@@ -1,7 +1,9 @@
 ﻿// ADD #IFs LATER
 using UnityEngine;
+#if USE_APPODEAL
 using AppodealAds.Unity.Api;
 using AppodealAds.Unity.Common;
+#endif
 #if UNITY_ANDROID
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
@@ -17,11 +19,12 @@ namespace Ads
     public enum AdType { Interstitial, Rewarded, Banner }
 }
 
-public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListener, IBannerAdListener
+public abstract class BaseSDK //: IRewardedVideoAdListener, IInterstitialAdListener, IBannerAdListener 
 {
     public abstract void Initialize();
 
-#region Appodeal
+    #region Appodeal
+#if USE_APPODEAL
     public string appKey;
     /// <summary>
     /// Initialize Appodeal.
@@ -42,7 +45,7 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
         Appodeal.cache(Appodeal.BANNER_BOTTOM);
         Appodeal.cache(Appodeal.INTERSTITIAL);
         Appodeal.initialize(appKey, Appodeal.BANNER | Appodeal.INTERSTITIAL | Appodeal.REWARDED_VIDEO, true);
-        Appodeal.setRewardedVideoCallbacks(this);
+        //Appodeal.setRewardedVideoCallbacks(this);
         Debug.Log("<color=blue>Appodeal initialized for Android.</color>");
     }
 
@@ -133,6 +136,7 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
     public void onBannerClicked() { Debug.Log("banner clicked"); }
     public void onBannerExpired() { Debug.Log("banner expired"); }
 #endregion
+#endif
 #endregion
 
 #region Google Play Games
@@ -185,7 +189,7 @@ public abstract class BaseSDK : IRewardedVideoAdListener, IInterstitialAdListene
             }
         });
     }
-    #endregion
+#endregion
 
 #region Chocolate
 #if USE_CHOCOLATE
@@ -340,7 +344,9 @@ public class AndroidSDK : BaseSDK
 #if UNITY_ANDROID
         InitializeGooglePlayGames();
         SignIn();
+#if USE_APPODEAL
         InitializeAppodeal();
+#endif
         InitializeGameAnalytics();
         InitializeFirebase();
 #if USE_CHOCOLATE
@@ -378,7 +384,9 @@ public class IOSSDK : BaseSDK
     {
 #if UNITY_IOS
         SignIn();
+#if USE_APPODEAL
         InitializeAppodeal();
+#endif
         InitializeGameAnalytics();
         InitializeFirebase();
 #if USE_CHOCOLATE
@@ -434,6 +442,8 @@ public class PluginManager : MonoBehaviour
 
     public void RunAppodealAd(int type)
     {
+#if USE_APPODEAL
         sdk.RunAppodealAd((Ads.AdType)type);
+#endif
     }
 }

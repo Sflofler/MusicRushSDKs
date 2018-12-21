@@ -83,20 +83,20 @@ dependencies {
 	compile(name: 'devtodev', ext:'aar')
 	compile(name: 'gameanalytics', ext:'aar')
 	// Vdopia Session
-	compile("com.vdopia.ads.lw:unity-plugin:1.1.8")
-	compile("com.vdopia.ads.lw:coresdk:2.5.9")
+	//compile("com.vdopia.ads.lw:unity-plugin:1.1.8")
+	//compile("com.vdopia.ads.lw:coresdk:2.5.9")
 	//compile("com.vdopia.ads.lw:adcolony-adapter:1.0.8")
 	//compile("com.vdopia.ads.lw:applovin-adapter:1.1.0")
-	compile("com.vdopia.ads.lw:baidu-adapter:1.0.7")
+	//compile("com.vdopia.ads.lw:baidu-adapter:1.0.7")
 	//compile("com.vdopia.ads.lw:chartboost-adapter:1.0.8")
 	//compile("com.vdopia.ads.lw:facebook-adapter:1.0.6")
-	compile("com.vdopia.ads.lw:google-adapter:1.1.2")
+	//compile("com.vdopia.ads.lw:google-adapter:1.1.2")
 	//compile("com.vdopia.ads.lw:inmobi-adapter:1.0.9")
 	//compile("com.vdopia.ads.lw:mopub-adapter:1.0.9")
 	//compile("com.vdopia.ads.lw:ogury-adapter:1.0.6")
-	compile("com.vdopia.ads.lw:youappi-adapter:1.0.8")
+	//compile("com.vdopia.ads.lw:youappi-adapter:1.0.8")
 	//compile("com.vdopia.ads.lw:tapjoy-adapter:1.0.6")
-	compile("com.vdopia.ads.lw:unity-adapter:1.1.0")
+	//compile("com.vdopia.ads.lw:unity-adapter:1.1.0")
 	//compile("com.vdopia.ads.lw:vungle-adapter:1.0.7")
 
 	// compile 'com.github.vungle:vungle-android-sdk:6.3.17'
@@ -115,6 +115,7 @@ dependencies {
  //    exclude group: 'com.google.android.exoplayer'
 	// }
     // --- // --- //
+    // ADS Projects
 	compile project(':adcolony')
 	compile project(':appodeal')
 	compile project(':Firebase')
