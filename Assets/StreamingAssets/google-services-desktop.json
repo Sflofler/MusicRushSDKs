@@ -1,42 +1,37 @@
 {
-  "project_info": {
-    "project_number": "70504761397",
-    "firebase_url": "https://music-rush.firebaseio.com",
-    "project_id": "music-rush",
-    "storage_bucket": "music-rush.appspot.com"
-  },
   "client": [
     {
+      "services": {
+        "appinvite_service": {
+          "status": 0
+        }, 
+        "analytics_service": {
+          "status": 0
+        }
+      }, 
+      "oauth_client": [
+        {
+          "client_id": "70504761397-o5n5ealohrfoc8sdm2biutc7t5cqlniv.apps.googleusercontent.com"
+        }
+      ], 
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcjLV4saM1oeeedgkTQ_-qNdAsvAZDYt8"
+        }
+      ], 
       "client_info": {
-        "mobilesdk_app_id": "1:70504761397:android:2c3c0fab5767fad6",
+        "mobilesdk_app_id": "1:70504761397:ios:2c3c0fab5767fad6", 
         "android_client_info": {
           "package_name": "com.CanvasMobileGames.SuperCasual"
         }
-      },
-      "oauth_client": [
-        {
-          "client_id": "70504761397-c0lstekps3s0aa0nt6v5tcgsthpjpkt2.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCdERZr6meY1yPpAuJcDJJfKQ16o_0lWro"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
       }
     }
-  ],
-  "configuration_version": "1"
+  ], 
+  "configuration_version": "1", 
+  "project_info": {
+    "storage_bucket": "music-rush.appspot.com", 
+    "project_id": "music-rush", 
+    "firebase_url": "https://music-rush.firebaseio.com", 
+    "project_number": "70504761397"
+  }
 }

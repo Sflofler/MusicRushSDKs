@@ -9,7 +9,9 @@ using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 #endif
 using GameAnalyticsSDK;
+#if USE_FIREBASE
 using Firebase;
+#endif
 #if USE_CHOCOLATE
 using Vdopia; // Chocolate
 #endif
@@ -166,10 +168,10 @@ public abstract class BaseSDK //: IRewardedVideoAdListener, IInterstitialAdListe
         GameAnalytics.Initialize();
         Debugger.Log("blue", "Game Analytics", "Initialized.");
     }
-#endregion
+    #endregion
 
 #region Firebase
-
+#if USE_FIREBASE
     /// <summary>
     /// Initializes Firebase SDK.
     /// </summary>
@@ -189,6 +191,7 @@ public abstract class BaseSDK //: IRewardedVideoAdListener, IInterstitialAdListe
             }
         });
     }
+#endif
 #endregion
 
 #region Chocolate
@@ -348,7 +351,9 @@ public class AndroidSDK : BaseSDK
         InitializeAppodeal();
 #endif
         InitializeGameAnalytics();
+#if USE_FIREBASE
         InitializeFirebase();
+#endif
 #if USE_CHOCOLATE
         InitializeChocolate();
 #endif
@@ -388,7 +393,9 @@ public class IOSSDK : BaseSDK
         InitializeAppodeal();
 #endif
         InitializeGameAnalytics();
+#if USE_FIREBASE
         InitializeFirebase();
+#endif
 #if USE_CHOCOLATE
         InitializeChocolate();
 #endif
