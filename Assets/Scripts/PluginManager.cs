@@ -8,7 +8,9 @@ using AppodealAds.Unity.Common;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 #endif
+#if USE_GAMEANALYTICS
 using GameAnalyticsSDK;
+#endif
 #if USE_FIREBASE
 using Firebase;
 #endif
@@ -157,9 +159,10 @@ public abstract class BaseSDK //: IRewardedVideoAdListener, IInterstitialAdListe
 
     // Sign In to social.
     public abstract void SignIn();
-#endregion
+    #endregion
 
 #region Game Analytics
+#if USE_GAMEANALYTICS
     /// <summary>
     /// Initializes Game Analytics SDK(use it in Start method).
     /// </summary>
@@ -168,7 +171,8 @@ public abstract class BaseSDK //: IRewardedVideoAdListener, IInterstitialAdListe
         GameAnalytics.Initialize();
         Debugger.Log("blue", "Game Analytics", "Initialized.");
     }
-    #endregion
+#endif
+#endregion
 
 #region Firebase
 #if USE_FIREBASE
@@ -324,6 +328,7 @@ public abstract class BaseSDK //: IRewardedVideoAdListener, IInterstitialAdListe
 #endregion
 
 #region DevToDev
+#if USE_DEVTODEV
     /// <summary>
     /// Initialized DevToDev SDK.
     /// </summary>
@@ -334,6 +339,7 @@ public abstract class BaseSDK //: IRewardedVideoAdListener, IInterstitialAdListe
         Debugger.Log("blue", "DevToDev", "Initialized.");
 #endif
     }
+#endif
 #endregion
 }
 
@@ -350,14 +356,18 @@ public class AndroidSDK : BaseSDK
 #if USE_APPODEAL
         InitializeAppodeal();
 #endif
+#if USE_GAMEANALYTICS
         InitializeGameAnalytics();
+#endif
 #if USE_FIREBASE
         InitializeFirebase();
 #endif
 #if USE_CHOCOLATE
         InitializeChocolate();
 #endif
+#if USE_USE_DEVTODEV
         InitializeDevToDev();
+#endif
 
         Debug.Log("<color=blue>SDK Manager Initialized</color>");
 #endif
@@ -392,14 +402,18 @@ public class IOSSDK : BaseSDK
 #if USE_APPODEAL
         InitializeAppodeal();
 #endif
+#if USE_GAMEANALYTICS
         InitializeGameAnalytics();
+#endif
 #if USE_FIREBASE
         InitializeFirebase();
 #endif
 #if USE_CHOCOLATE
         InitializeChocolate();
 #endif
+#if USE_DEVTODEV
         InitializeDevToDev();
+#endif
 
         Debug.Log("<color=blue>SDK Manager Initialized</color>");
 #endif
