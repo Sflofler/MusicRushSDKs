@@ -107,6 +107,7 @@ void initialize(const char *gameKey, const char *gameSecret) {
     ga_cc_delegate = [[GACommandCenterUnityDelegate alloc] init];
     [GameAnalytics setCommandCenterDelegate:ga_cc_delegate];
 
+    [GameAnalytics setEnabledErrorReporting:NO];
     [GameAnalytics initializeWithGameKey:gameKeyString gameSecret:gameSecretString];
 }
 
@@ -251,6 +252,10 @@ void setEnabledVerboseLog(BOOL flag) {
 
 void setManualSessionHandling(BOOL flag) {
     [GameAnalytics setEnabledManualSessionHandling:flag];
+}
+
+void setEventSubmission(BOOL flag) {
+    [GameAnalytics setEnabledEventSubmission:flag];
 }
 
 void gameAnalyticsStartSession() {
