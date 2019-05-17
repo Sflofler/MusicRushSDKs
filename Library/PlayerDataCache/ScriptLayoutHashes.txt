@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/Tiago/Desktop/Build/MusicRushSDKs/SDKs.apk
+E:/UnityBuilds/MusicRushSDK/SDKs.apk
 SceneListBegin?
 Assets/Scenes/Main.unity
 SceneListEnd?
@@ -8,6 +8,7 @@ SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ReporterGUI
 31ade29918822ddc912b3dc71718af78 Assembly-CSharp.dll:DTDEditor.DevToDevSDK
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ReporterMessageReceiver
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameSparksRTUnity
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 4b12dd839b2293f8457cd67cc3610b85 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -20,6 +21,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 92d7a83ea3c7404e484f3b2eed421855 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 92d7a83ea3c7404e484f3b2eed421855 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GameSparks.Platforms.DefaultPlatform
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -223,7 +225,9 @@ e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GameSparks.Platforms.WebSocketController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GoogleMobileAds.Common.MobileAdsEventExecutor
+0c76bce9843a099aacd0237535a41196 Assembly-CSharp.dll:.GameSparksTestUI
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
@@ -231,6 +235,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 50372c1fbd6d9cb8110d96cb2927daca Assembly-CSharp.dll:GameAnalyticsSDK.Setup.Settings
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+e7cc82fe8897044aa37890c5eb3bfb9f Assembly-CSharp.dll:.GameSparksUnity
 05524b8f659e7bfe5756d1335fec24ba devtodev_cross.dll:DevToDev.AsyncOperationDispatcher
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GameAnalyticsSDK.Events.GA_SpecialEvents
 05524b8f659e7bfe5756d1335fec24ba devtodev_cross.dll:DevToDev.AsyncOperationDispatcher
@@ -273,6 +278,7 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
 05524b8f659e7bfe5756d1335fec24ba devtodev_cross.dll:DevToDev.AsyncOperationDispatcher
+c82b4f672e2c88fcc54d5131943c7bb1 Assembly-CSharp.dll:.GameSparksSettings
 a8ed45ab553b07236625df6cc6ac449c Assembly-CSharp.dll:DTDEditor.DTDVisualEditorWindow
 26215f135eeb48d8fa1189498c107f6c Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 0561521e336e270e6e5a9c61387cb838 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
