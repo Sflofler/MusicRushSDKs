@@ -1,9 +1,10 @@
 fileFormatVersion: 2
-guid: cf3025a9b893d3d49980e1d7570f7978
-timeCreated: 1544106335
-licenseType: Free
-TextScriptImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+guid: !!python/unicode 'c0ae98308ab0475a9583e1ea6e82ec65'
+labels:
+- gvh
+- gvh_version-5.4.2
+timeCreated: 1480838400
+DefaultImporter:
+  userData:
+  assetBundleName:
+  assetBundleVariant:
