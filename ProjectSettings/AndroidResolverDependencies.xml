@@ -13,7 +13,9 @@
     <package>com.google.firebase:firebase-common:16.0.4</package>
     <package>com.google.firebase:firebase-core:16.0.5</package>
     <package>com.google.firebase:firebase-iid:[17.0.4]</package>
+    <package>com.google.firebase:firebase-messaging:17.3.4</package>
     <package>com.google.firebase:firebase-messaging:17.3.4+</package>
+    <package>com.google.firebase:firebase-messaging-unity:5.4.2</package>
     <package>com.google.games:gpgs-plugin-support:0.9.54</package>
   </packages>
   <files>
@@ -65,6 +67,7 @@
     <file>Assets/Plugins/Android/com.google.firebase.firebase-iid-interop-16.0.1.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-measurement-connector-17.0.1.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-messaging-18.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-messaging-unity-5.4.2.aar</file>
     <file>Assets/Plugins/Android/com.google.games.gpgs-plugin-support-0.9.54.aar</file>
   </files>
 </dependencies>

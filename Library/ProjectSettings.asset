@@ -551,7 +551,7 @@ PlayerSettings:
   webGLCompressionFormat: 1
   scriptingDefineSymbols:
     4: NO_GPGS;xxxUSE_CHOCOLATE;xxxUSE_APPODEAL;xxxUSE_FIREBASE
-    7: xxxUSE_CHOCOLATE;xxxUSE_APPODEAL;xxxUSE_FIREBASE;xxxUSE_DEVTODEV;xxxUSE_GAMEANALYTICS
+    7: xxxUSE_CHOCOLATE;USE_APPODEAL;USE_FIREBASE;USE_DEVTODEV;USE_GAMEANALYTICS
   platformArchitecture: {}
   scriptingBackend: {}
   incrementalIl2cppBuild: {}

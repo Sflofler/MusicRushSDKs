@@ -10,6 +10,7 @@ using GooglePlayGames.BasicApi;
 #endif
 #if USE_GAMEANALYTICS
 using GameAnalyticsSDK;
+using System.Collections;
 #endif
 #if USE_FIREBASE
 using Firebase;
@@ -448,6 +449,7 @@ public class PluginManager : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(StartFirebaseCallBacks(3f));
         //sdk.InitializeGameAnalytics();
     }
 
@@ -460,6 +462,30 @@ public class PluginManager : MonoBehaviour
 #endif
         sdk.Initialize();
     }
+
+    #region Firebase Cloud Message CallBacks
+    /// <summary>
+    /// Start Firebase Cloud Messaging Callbacks.
+    /// </summary>
+    /// <param name="time"></param>
+    /// <returns></returns>
+    private IEnumerator StartFirebaseCallBacks(float time)
+    {
+        yield return new WaitForSecondsRealtime(time);
+        Firebase.Messaging.FirebaseMessaging.TokenReceived += OnTokenReceived;
+        Firebase.Messaging.FirebaseMessaging.MessageReceived += OnMessageReceived;
+    }
+
+    public void OnTokenReceived(object sender, Firebase.Messaging.TokenReceivedEventArgs token)
+    {
+        UnityEngine.Debug.Log("Received Registration Token: " + token.Token);
+    }
+
+    public void OnMessageReceived(object sender, Firebase.Messaging.MessageReceivedEventArgs e)
+    {
+        UnityEngine.Debug.Log("Received a new message from: " + e.Message.From);
+    }
+    #endregion
 
     public void RunAppodealAd(int type)
     {

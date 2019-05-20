@@ -82,6 +82,7 @@ dependencies {
 	compile(name: 'com.google.firebase.firebase-measurement-connector-17.0.1', ext:'aar')
 	////compile(name: 'com.google.firebase.firebase-measurement-connector-impl-17.0.4', ext:'aar')
 	compile(name: 'com.google.firebase.firebase-messaging-18.0.0', ext:'aar')
+	compile(name: 'com.google.firebase.firebase-messaging-unity-5.4.2', ext:'aar')
 	compile(name: 'com.google.games.gpgs-plugin-support-0.9.54', ext:'aar')
 	compile(name: 'devtodev', ext:'aar')
 	compile(name: 'gameanalytics', ext:'aar')
